@@ -6,7 +6,7 @@ The name of my project is called Garden Zone
 
 ## Project Description
 
-Garden Zone is a Postgres, Django, Python and React build where the user is able to select what zone they live in, and the app will generate what vegetables are best to grow in the selected zone. The app will also allow users to create an account and must be logged in to create comments and leave tips for other users.
+Garden Zone is a Postgres, Django, Python and React build where the user is able to select what zone they live in, and the app will generate what vegetables are best to grow in the selected zone. The app will also allow users to create an account and must be logged in to create comments and add new vegetables.
 
 ## Wireframes
 
