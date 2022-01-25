@@ -7,9 +7,9 @@ from .models import Zone, Vegetable
 class ZoneViewSet(viewsets.ModelViewSet):
   queryset = Zone.objects.all()
   serializer_class = ZoneSerializer
-  permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+  # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
   
 class VegetableViewSet(viewsets.ModelViewSet):
     queryset = Vegetable.objects.all()
     serializer_class = VegetableSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly]
