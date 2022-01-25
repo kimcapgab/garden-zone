@@ -28,7 +28,9 @@ SECRET_KEY = 'django-insecure-0m_b!4!@r17+v#j(iur_1$xlsvttzkn%(bx8sbx7oa0nvx&puq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+  'garden-zone-db.herokuapp.com'
+]
 
 
 # Application definition
