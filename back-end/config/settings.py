@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-0m_b!4!@r17+v#j(iur_1$xlsvttzkn%(bx8sbx7oa0nvx&puq
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  'garden-zone-db.herokuapp.com'
+  'garden-zone-db.herokuapp.com',
+  'localhost'
 ]
 
 
