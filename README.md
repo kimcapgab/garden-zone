@@ -37,3 +37,7 @@ Link to my [wireframes](https://www.figma.com/file/f8PcSmse5SlvX48AS8JNrt/Garden
 ## Entity Relationship Diagram
 
 ![alt text](https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643062734/Project%204/Screen_Shot_2022-01-24_at_5.18.51_PM_hq7v5q.png)
+
+## Component Hierarchy
+
+![alt text](https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643120394/Project%204/Screen_Shot_2022-01-25_at_9.19.50_AM_mrzkvl.png)
