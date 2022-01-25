@@ -18,7 +18,7 @@ Link to my [wireframes](https://www.figma.com/file/f8PcSmse5SlvX48AS8JNrt/Garden
 
 ![alt text](https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643060425/Project%204/Screen_Shot_2022-01-24_at_4.40.22_PM_tgokmz.png)
 
-![alt text](https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643060450/Project%204/Screen_Shot_2022-01-24_at_4.40.47_PM_pabc9c.png)
+![alt text](https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643120775/Project%204/Screen_Shot_2022-01-25_at_9.26.11_AM_vgw8wu.png)
 
 ![alt text](https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643060484/Project%204/Screen_Shot_2022-01-24_at_4.41.19_PM_mpa5oz.png)
 
