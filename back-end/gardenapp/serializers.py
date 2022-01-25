@@ -4,7 +4,7 @@ from .models import Zone, Vegetable
 class ZoneSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Zone
-    fields = ['name', 'description', 'intro']
+    fields = ['name', 'description', 'intro', 'vegetables']
     
 class VegetableSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
