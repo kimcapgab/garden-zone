@@ -13,12 +13,13 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+
 from dotenv import load_dotenv
 load_dotenv()
 
-SECRET_KEY = os.getenv('SECRET_KEY')
-IS_PRODUCTION = os.getenv('PRODUCTION') == 'True'
 
+IS_PRODUCTION = os.getenv('PRODUCTION') == 'True'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 if IS_PRODUCTION:
@@ -94,17 +95,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 if IS_PRODUCTION:
     DATABASES = {
-      'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+        'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
 else:
     DATABASES = {
-      'default': {
-          'ENGINE': 'django.db.backends.postgresql',
-          'NAME': 'garden',
-          'USER': 'garden_admin',
-          'PASSWORD': 'password',
-          'HOST': 'localhost',
-      }
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'garden',
+            'USER': 'garden_admin',
+            'PASSWORD': 'password',
+            'HOST': 'localhost',
+        }
     }
 
 
