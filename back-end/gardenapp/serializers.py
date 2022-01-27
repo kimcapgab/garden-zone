@@ -5,12 +5,12 @@ from django.contrib.auth.models import User
 class ZoneSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Zone
-    fields = ['name', 'description', 'intro', 'vegetables']
+    fields = ['id', 'name', 'description', 'intro', 'vegetables']
     
 class VegetableSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Vegetable
-    fields = ['name', 'description', 'sunlight', 'care', 'image', 'tips', 'zone']
+    fields = ['id', 'name', 'description', 'sunlight', 'care', 'image', 'tips', 'zone']
     
 class UserSerializer(serializers.ModelSerializer):
   class Meta:

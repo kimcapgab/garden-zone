@@ -1,6 +1,7 @@
 import React from 'react';
 import { getZones } from '../../services/zones';
 import { useState, useEffect } from 'react'
+import './Home.css'
 
 export default function Home() {
   const [zones, setZones] = useState([])
@@ -19,13 +20,12 @@ export default function Home() {
 
   return (
     <div>
-      <h1>HOME PAGE! testing  see if this works</h1>
-      <div>
+      <h1 className='home-zone'>Select a Zone</h1>
+      <div className='home-buttons'>
         {zones &&
           zones.map((zone) => (
-            zone.name
+            <button className='zone-buttons'>Zone {zone.name}</button>
           ))}
-      <p>Should see the zone names above</p>
       </div>
     </div>
   
