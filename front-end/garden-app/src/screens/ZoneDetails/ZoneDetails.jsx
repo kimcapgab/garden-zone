@@ -25,14 +25,16 @@ export default function ZoneDetails() {
     const fetchVegetables = async () => {
       const allVegs = await getVegetables()
       setVegetablesAll(allVegs)
-      // console.log(allVegs)
-      // console.log(allVegs[1].zone)
     }
     fetchVegetables();
   }, [])
   
+  console.log(vegetablesAll)
+  const zoneVeg = vegetablesAll.forEach(function (item) {
+    console.log(item.name)
+  })
 
-// console.log(vegetablesAll)
+  console.log(zoneVeg)
 
   return (
     <div >
@@ -49,11 +51,19 @@ export default function ZoneDetails() {
                 <p >{veg}</p>
               </div>
             ))}
-          {/* {vegetablesAll &&
+          
+          {/* {vegetablesAll && vegetables &&
             vegetablesAll.forEach(function (item) {
-              console.log(item.zone)
-              if (item.zone === { vegetables })
-                console.log("yay")
+              vegetables.map((veg) => (
+                if (item.zone === veg) {
+                  
+                }
+                console.log(veg)
+              ))
+              console.log(item.name)
+              
+              // if (item.zone === { vegetables })
+              //   console.log("yay")
             })
           } */}
         </div>

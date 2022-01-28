@@ -2,15 +2,25 @@ from rest_framework import serializers
 from .models import Zone, Vegetable
 from django.contrib.auth.models import User
 
+class VegetableSerializer(serializers.HyperlinkedModelSerializer):  
+  class Meta:
+    model = Vegetable
+    fields = ['id', 'name', 'description', 'sunlight', 'care', 'image', 'tips', 'zone']
+
+
 class ZoneSerializer(serializers.HyperlinkedModelSerializer):
+  vegetables = VegetableSerializer(many = True)
   class Meta:
     model = Zone
     fields = ['id', 'name', 'description', 'intro', 'vegetables']
     
-class VegetableSerializer(serializers.HyperlinkedModelSerializer):
-  class Meta:
-    model = Vegetable
-    fields = ['id', 'name', 'description', 'sunlight', 'care', 'image', 'tips', 'zone']
+  def create(self, validated_data):
+    vegetables_data = validated_data.pop('vegetables')
+    zone = Zone.objects.create(**validated_data)
+    for vegetable_data in vegetables_data:
+      Vegetable.objects.create(zone=zone, **vegetable_data)
+    return zone
+    
     
 class UserSerializer(serializers.ModelSerializer):
   class Meta:
