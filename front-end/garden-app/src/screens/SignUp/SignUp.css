@@ -1,0 +1,31 @@
+.sign-up-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.sign-up-lt {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.sign-up-img {
+  max-width: 400px;
+}
+
+.sign-up-title {
+  max-width: 450px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.sign-up-form {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.sign-up {
+  background-color: #fdea73;
+  margin-top: 5%;
+}

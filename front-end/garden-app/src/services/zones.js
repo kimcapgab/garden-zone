@@ -8,3 +8,12 @@ export const getZones = async () => {
     throw error
   }
 }
+
+export const getZone = async (id) => {
+  try {
+    const response = await api.get(`/zones/${id}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}

@@ -10,6 +10,7 @@
 .header-title {
   display: grid;
   justify-content: center;
+  cursor: pointer;
 }
 
 .header-log {
@@ -18,4 +19,5 @@
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   font-size: 12px;
+  cursor: pointer;
 }

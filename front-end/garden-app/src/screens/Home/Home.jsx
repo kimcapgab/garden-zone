@@ -2,6 +2,7 @@ import React from 'react';
 import { getZones } from '../../services/zones';
 import { useState, useEffect } from 'react'
 import './Home.css'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   const [zones, setZones] = useState([])
@@ -10,10 +11,9 @@ export default function Home() {
     const fetchZones = async () => {
       const allZones = await getZones()
       setZones(allZones)
-      
     }
     fetchZones()
-    console.log(zones)
+    
   }, [])
 
 
@@ -24,7 +24,11 @@ export default function Home() {
       <div className='home-buttons'>
         {zones &&
           zones.map((zone) => (
-            <button className='zone-buttons'>Zone {zone.name}</button>
+            <div>
+            <Link to={`/zones/${zone.id}`} className='zone-link'>
+            <button className='zone-buttons' key={zone.id}>Zone {zone.name}</button>
+            </Link>  
+            </div>
           ))}
       </div>
     </div>
