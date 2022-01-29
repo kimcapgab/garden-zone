@@ -28,4 +28,36 @@
 .sign-up {
   background-color: #fdea73;
   margin-top: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  border-radius: 6px;
+}
+
+.form-container-sign-up {
+  max-width: 450px;
+  margin-top: 10%;
+}
+
+.sign-up-input {
+  width: 350px;
+  margin: 2%;
+}
+
+.sign-up-all-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.act-btn {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: #005304;
+  border: none;
+  border-radius: 12px;
+  font-family: "Questrial", sans-serif;
+  color: #ffff;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
 }

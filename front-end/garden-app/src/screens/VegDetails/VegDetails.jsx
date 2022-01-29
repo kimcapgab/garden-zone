@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import './VegDetails.css'
 import { getVegetable } from '../../services/vegetables';
+import { Link } from 'react-router-dom'
 
 export default function VegDetails() {
   const [veggie, setVeggie] = useState([])
@@ -31,7 +32,11 @@ export default function VegDetails() {
           <h2>Tips and Considerations</h2>
           <p>{ tips}</p>
         </div>
-
       }
+      <div className='edit-btn-container'>
+      <Link to={`/vegetables/edit/${id}`} className='underline'>
+      <button className='z-btn'> Edit Vegetable</button>
+        </Link>
+        </div>
     </div>
 )}

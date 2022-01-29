@@ -2,6 +2,7 @@ h1,
 p {
   font-family: "Questrial", sans-serif;
   color: #005304;
+  text-decoration: none;
 }
 .zone-name {
   text-shadow: 2px 2px #c9d8ca;
@@ -30,4 +31,13 @@ p {
   font-size: 18px;
   padding: 20px;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.veggie-details:hover {
+  border-bottom: 2px solid #fdea73;
 }

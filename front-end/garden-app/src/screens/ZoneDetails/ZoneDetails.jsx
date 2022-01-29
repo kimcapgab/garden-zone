@@ -2,13 +2,12 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getZone } from '../../services/zones';
-import { getVegetables } from '../../services/vegetables';
+import { Link } from 'react-router-dom'
 import './ZoneDetails.css'
 
 
 export default function ZoneDetails() {
   const [zone, setZone] = useState([]);
-  const [vegetablesAll, setVegetablesAll] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -20,22 +19,7 @@ export default function ZoneDetails() {
   }, [id])
 
   const { name, description, intro, vegetables } = zone;
-
-  useEffect(() => {
-    const fetchVegetables = async () => {
-      const allVegs = await getVegetables()
-      setVegetablesAll(allVegs)
-    }
-    fetchVegetables();
-  }, [])
   
-  console.log(vegetablesAll)
-  const zoneVeg = vegetablesAll.forEach(function (item) {
-    console.log(item.name)
-  })
-
-  console.log(zoneVeg)
-
   return (
     <div >
       {zone &&
@@ -46,30 +30,22 @@ export default function ZoneDetails() {
           <p>{intro}</p>
           
           {vegetables &&
-            vegetables.map((veg) => (
-              <div>
-                <p >{veg}</p>
-              </div>
-            ))}
-          
-          {/* {vegetablesAll && vegetables &&
-            vegetablesAll.forEach(function (item) {
-              vegetables.map((veg) => (
-                if (item.zone === veg) {
-                  
-                }
-                console.log(veg)
-              ))
-              console.log(item.name)
-              
-              // if (item.zone === { vegetables })
-              //   console.log("yay")
+            vegetables.map((veggie) => {
+              return (
+                <div>
+                <Link to={`/vegetables/${veggie.id}`} className='underline'  >
+                  <p className='veggie-details'>{veggie.name}</p>
+                </Link>
+                </div>
+              )
             })
-          } */}
+            }
         </div>
       }
       <div className='z-contain-btn'>
-      <button className='z-btn' >Add Vegetable</button>
+      <Link to={`/vegetables/create`} className='underline'>
+      <button className='z-btn'> Add Vegetable</button>
+      </Link>
       </div>
 
     </div>

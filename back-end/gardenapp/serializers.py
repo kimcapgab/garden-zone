@@ -3,6 +3,7 @@ from .models import Zone, Vegetable
 from django.contrib.auth.models import User
 
 class VegetableSerializer(serializers.HyperlinkedModelSerializer):  
+  zone = serializers.StringRelatedField()
   class Meta:
     model = Vegetable
     fields = ['id', 'name', 'description', 'sunlight', 'care', 'image', 'tips', 'zone']

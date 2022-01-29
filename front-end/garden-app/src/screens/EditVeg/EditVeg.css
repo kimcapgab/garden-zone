@@ -1,0 +1,68 @@
+.form-title {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  justify-content: center;
+  background-color: #fdea73;
+  border-radius: 12px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-bottom: 5%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-create-form {
+  display: flex;
+  max-width: 700px;
+  flex-direction: column;
+}
+
+.edit-btn {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: #005304;
+  border: none;
+  border-radius: 12px;
+  font-family: "Questrial", sans-serif;
+  color: #ffff;
+  font-size: 18px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+input,
+select {
+  font-family: "Questrial", sans-serif;
+  margin-bottom: 2%;
+  width: 550px;
+  height: 38px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bolder;
+  color: #005304;
+}
+
+::placeholder {
+  color: #005304;
+}
+
+.delete-edits {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  color: #005304;
+  font-family: "Questrial", sans-serif;
+}

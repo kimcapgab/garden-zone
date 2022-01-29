@@ -25,8 +25,18 @@ h1 {
 
 p {
   font-size: 20px;
+  text-decoration: none;
 }
 
 h2 {
   font-size: 28px;
+}
+
+Link {
+  text-decoration: none;
+}
+
+.edit-btn-container {
+  display: flex;
+  justify-content: center;
 }
