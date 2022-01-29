@@ -7,12 +7,6 @@
   align-items: center;
 }
 
-.header-title {
-  display: grid;
-  justify-content: center;
-  cursor: pointer;
-}
-
 .header-log {
   grid-column: 3;
   display: grid;
@@ -20,4 +14,15 @@
   justify-items: center;
   font-size: 12px;
   cursor: pointer;
+}
+
+.home-logo {
+  max-width: 70px;
+}
+
+.logo-cotainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: end;
 }
