@@ -76,6 +76,9 @@ CORS_ALLOWED_ORIGINS = [
   "http://localhost:3000",
   "http://localhost:8000",
   "http://localhost:8001",
+  "https://garden-zone-db.herokuapp.com",
+  "https://relaxed-tereshkova-af5914.netlify.app",
+  
 ]
 
 CORS_ALLOW_METHODS = [
