@@ -6,7 +6,7 @@ import Footer from '../Footer/Footer';
 export default function Layout(props) {
   return (
     <div>
-      <Header />
+      <Header loggedIn={props.loggedIn} />
       <div className="layout-children">
       {props.children}
       </div>

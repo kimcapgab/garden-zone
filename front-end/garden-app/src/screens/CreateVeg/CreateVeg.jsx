@@ -55,18 +55,18 @@ export default function CreateVeg({ setToggle }) {
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12 and 13">12 and 13</option>
+              <option value="9">5</option>
+              <option value="10">6</option>
+              <option value="11">7</option>
+              <option value="12">8</option>
+              <option value="13">9</option>
+              <option value="14">10</option>
+              <option value="15">11</option>
+              <option value="16">12 and 13</option>
             </select>
           </div>
           <div className="create-container">
-            <button className="create-btn" onClick={handleSubmit}>Create Vegetable</button>
+            <button className="create-btn" >Create Vegetable</button>
             </div>
         </form>
       </div>

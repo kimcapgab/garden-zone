@@ -3,8 +3,9 @@ import { getZones } from '../../services/zones';
 import { useState, useEffect } from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout';
 
-export default function Home() {
+export default function Home(props) {
   const [zones, setZones] = useState([])
 
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Home() {
 
 
   return (
+  
     <div>
       <h1 className='home-zone'>Select a Zone</h1>
       <div className='home-buttons'>
@@ -32,6 +34,7 @@ export default function Home() {
           ))}
       </div>
     </div>
+
   
     )
 }

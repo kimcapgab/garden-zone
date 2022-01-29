@@ -2,14 +2,14 @@ from rest_framework import serializers
 from .models import Zone, Vegetable
 from django.contrib.auth.models import User
 
-class VegetableSerializer(serializers.HyperlinkedModelSerializer):  
-  zone = serializers.StringRelatedField()
+class VegetableSerializer(serializers.ModelSerializer):  
+
   class Meta:
     model = Vegetable
     fields = ['id', 'name', 'description', 'sunlight', 'care', 'image', 'tips', 'zone']
 
 
-class ZoneSerializer(serializers.HyperlinkedModelSerializer):
+class ZoneSerializer(serializers.ModelSerializer):
   vegetables = VegetableSerializer(many = True)
   class Meta:
     model = Zone
