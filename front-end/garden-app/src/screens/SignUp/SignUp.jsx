@@ -20,18 +20,12 @@ export default function SignUp({ setLoggedIn }) {
     }
     try {
       const user = await signUp(newUser)
-        setLoggedIn(true)
+        setLoggedIn(user)
         nav('/')
     } catch (error) {
       console.error(error)
     }
   }
-
-
-
-
-
-
   return (
     <div className='sign-up-container'>
       <div className='sign-up-lt'>

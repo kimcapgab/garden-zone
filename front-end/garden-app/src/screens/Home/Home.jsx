@@ -20,6 +20,11 @@ export default function Home({loggedIn, setLoggedIn, toggle, setToggle   }) {
 
   return (
     <div>
+
+<div>
+          <h1 className='home-into'>USDA Plant Hardiness Zone Map is the standard by which gardeners and growers can determine which plants are most likely to thrive at a location.</h1>
+
+        </div>
       
         <div>
     
@@ -39,13 +44,9 @@ export default function Home({loggedIn, setLoggedIn, toggle, setToggle   }) {
       </div>  
       
       
-        <div>
-          <h1 className='home-into'>USDA Plant Hardiness Zone Map is the standard by which gardeners and growers can determine which plants are most likely to thrive at a location.</h1>
-          <h1 className='home-into'>Login or create an account now to join the gardening community in order to add vegetables and make any edits. </h1>
-          <div className='home-image-container'>
+      <div className='home-image-container'>
           <img className='home-image' src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643603025/Project%204/Plant_Gardening_Instagram_Post_1_hyzons.png" alt="home-gardeners" />
           </div>
-        </div>
       
       
 
