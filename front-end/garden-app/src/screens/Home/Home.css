@@ -53,3 +53,27 @@
   display: grid;
   justify-items: center;
 }
+
+@media (max-width: 375px) {
+  .home-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home-into {
+    font-size: 20px;
+  }
+  .home-image {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home-into {
+    font-size: 20px;
+  }
+  .home-image {
+    max-width: 350px;
+  }
+}

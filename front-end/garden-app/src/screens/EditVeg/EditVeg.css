@@ -65,4 +65,18 @@ select {
 h3 {
   color: #005304;
   font-family: "Questrial", sans-serif;
+  text-align: center;
+}
+@media (max-width: 375px) {
+  input,
+  select {
+    width: 270px;
+  }
+
+  .edit-btn {
+    width: 250px;
+  }
+  .delete-edits {
+    align-items: center;
+  }
 }

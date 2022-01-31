@@ -21,6 +21,7 @@
   height: auto;
   grid-column: 3/5;
   grid-row: 1;
+  text-align: center;
 }
 
 .login-image-1 {
@@ -52,4 +53,15 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+}
+@media (max-width: 375px) {
+  .login-image-1 {
+    display: none;
+  }
+  .login-image-2 {
+    display: none;
+  }
+  .log-in {
+    margin-bottom: 20%;
+  }
 }
