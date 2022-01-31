@@ -15,7 +15,7 @@ export default function CreateVeg({ setToggle }) {
     zone: "",
   });
 
-  // const nav = useNavigate();
+  const nav = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,6 +29,7 @@ export default function CreateVeg({ setToggle }) {
     e.preventDefault();
     await createVegetable(veg);
     setToggle((e) => !e);
+    nav(`/`)
   };
 
   return (

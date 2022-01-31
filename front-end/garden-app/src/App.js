@@ -35,12 +35,12 @@ function App() {
     <div>
       <Layout loggedIn={loggedIn}>
         <Routes>
-          <Route path="/" element={<Home loggedIn={loggedIn}  />} />
+          <Route path="/" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} toggle={toggle} setToggle={setToggle} />} />
           <Route path="/zones/:id" element={<ZoneDetails />} />
           <Route path="/vegetables/:id" element={<VegDetails />} />
           <Route path="/user/login/" element={<Login setLoggedIn={setLoggedIn} />} />
           <Route path="/logout" element={<LogOut setLoggedIn={setLoggedIn}  />} />
-          <Route path="/user/signup/" element={<SignUp />} />
+          <Route path="/user/signup/" element={<SignUp setLoggedIn={setLoggedIn} />} />
           <Route path="/vegetables/create" element={<CreateVeg setToggle={setToggle} />} />
           <Route path="/vegetables/edit/:id" element={<EditVeg/>} />
           

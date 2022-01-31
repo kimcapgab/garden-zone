@@ -11,7 +11,7 @@ export default function LogOut({ setLoggedIn }) {
     const signOutUser = async () => {
       //We use the signOut service which will remove the jwt
       await logOut()
-      setLoggedIn(null)
+      setLoggedIn(false)
       navigate('/')
     }
     signOutUser()

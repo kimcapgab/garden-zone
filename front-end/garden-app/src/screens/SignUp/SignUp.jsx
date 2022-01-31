@@ -1,7 +1,37 @@
 import React from 'react';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { signUp } from '../../services/users.js'; 
 import './SignUp.css'
 
-export default function SignUp() {
+export default function SignUp({ setLoggedIn }) {
+
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const nav = useNavigate();
+
+  const onSignUp = async (event) => {
+    event.preventDefault()
+    const newUser = {
+      username,
+      email,
+      password,
+    }
+    try {
+      const user = await signUp(newUser)
+        setLoggedIn(user)
+        nav('/')
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+
+
+
+
+
   return (
     <div className='sign-up-container'>
       <div className='sign-up-lt'>
@@ -15,12 +45,11 @@ export default function SignUp() {
         <div className="form-container-sign-up">
           <form className='sign-up'>
             <div className='sign-up-all-inputs'>
-          <input className="sign-up-input" type="text" placeholder='Username' />
-          <input className="sign-up-input" type="email" placeholder='Email' />
-          <input className="sign-up-input" type="password" placeholder='Password' />
-              <input className="sign-up-input" type="password" placeholder='Confirm Password' />
+          <input required className="sign-up-input" type="text" placeholder='Username' name='username' value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input required className="sign-up-input" type="email" placeholder='Email' name='email' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input required className="sign-up-input" type="password" placeholder='Password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
               
-              <button className='act-btn'>Create Account</button>
+              <button className='act-btn' onClick={onSignUp}>Create Account</button>
               </div>
           </form>
         </div>

@@ -26,6 +26,7 @@ const unauthenticatedOptions = (
 );
 
 
+
 export default function Header({loggedIn}) {
   const navigate = useNavigate()
   return (
@@ -36,8 +37,6 @@ export default function Header({loggedIn}) {
         <h1 className='header-title' onClick={() => navigate('/')}>Garden Zone</h1>
       </div>
       <div className='header-log'>
-      {/* <h1 onClick={() => navigate('user/login/')}>Log In</h1>
-      <h1 onClick={() => navigate('user/signup/')}>Sign Up</h1> */}
           
           {
           loggedIn? authenticatedOptions : unauthenticatedOptions

@@ -3,6 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   margin-left: 2%;
   margin-right: 2%;
+  margin-bottom: 10%;
 }
 
 .sign-up-lt {

@@ -23,6 +23,33 @@
   color: #005304;
   font-size: 25px;
   padding: 30px;
+  width: 150px;
+  height: 100px;
   cursor: pointer;
   text-shadow: 2px 2px #c9d8ca;
+}
+.hone-link {
+  text-align: center;
+  color: #005304;
+  font-size: 18px;
+}
+
+.link-zip {
+  text-decoration: underline;
+  color: #005304;
+}
+
+.home-image {
+  max-width: 650px;
+}
+
+.home-into {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.home-image-container {
+  display: grid;
+  justify-items: center;
 }

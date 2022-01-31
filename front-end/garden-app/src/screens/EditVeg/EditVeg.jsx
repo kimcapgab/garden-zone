@@ -5,7 +5,7 @@ import { getVegetable, updateVegetable, deleteVegetable } from '../../services/v
 import { Link } from 'react-router-dom'
 import "./EditVeg.css"
 
-export default function EditVeg({ setToggle }) {
+export default function EditVeg() {
   const [veg, setVeg] = useState({
     name: "",
     description: "",
@@ -44,7 +44,6 @@ export default function EditVeg({ setToggle }) {
 
   const handleDelete = () => {
     deleteVegetable(id);
-    setToggle((e) => !e);
     navigate("/");
   }
 

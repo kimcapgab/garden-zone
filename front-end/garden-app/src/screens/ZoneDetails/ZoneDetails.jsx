@@ -21,7 +21,7 @@ export default function ZoneDetails() {
   const { name, description, intro, vegetables } = zone;
   
   return (
-    <div >
+    <div className='zone-all' >
       {zone &&
         <div className='zone-container'>
           <h1 className='zone-name'>Zone {name}</h1>
@@ -46,6 +46,10 @@ export default function ZoneDetails() {
       <Link to={`/vegetables/create`} className='underline'>
       <button className='z-btn'> Add Vegetable</button>
       </Link>
+      </div>
+
+      <div className="garden-container">
+        <img className='zone-garden' src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643420914/Project%204/7_nygqzw.png" alt="garden" />
       </div>
 
     </div>

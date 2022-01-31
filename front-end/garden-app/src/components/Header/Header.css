@@ -26,3 +26,15 @@
   align-items: center;
   justify-items: end;
 }
+
+.link {
+  background-color: #fdea73;
+  color: #005304;
+  font-size: 18px;
+  text-shadow: 2px 2px #c9d8ca;
+  cursor: pointer;
+}
+
+.header-title {
+  cursor: pointer;
+}

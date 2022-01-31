@@ -41,3 +41,20 @@ a {
 .veggie-details:hover {
   border-bottom: 2px solid #fdea73;
 }
+
+.zone-garden {
+  max-width: 260px;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.garden-container {
+  display: flex;
+  justify-content: center;
+}
+
+.zone-all {
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: center;
+}
