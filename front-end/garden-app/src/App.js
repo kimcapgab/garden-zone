@@ -11,6 +11,8 @@ import LogOut from "./screens/LogOut/LogOut";
 import CreateVeg from "./screens/CreateVeg/CreateVeg";
 import EditVeg from "./screens/EditVeg/EditVeg";
 import { verifyUser } from "./services/users";
+import CreateZone from "./screens/CreateZone/CreateZone";
+import EditZone from "./screens/EditZone/EditZone";
 
 
 
@@ -42,7 +44,9 @@ function App() {
           <Route path="/logout" element={<LogOut setLoggedIn={setLoggedIn}  />} />
           <Route path="/user/signup/" element={<SignUp setLoggedIn={setLoggedIn} />} />
           <Route path="/vegetables/create" element={<CreateVeg setToggle={setToggle} />} />
-          <Route path="/vegetables/edit/:id" element={<EditVeg/>} />
+          <Route path="/vegetables/edit/:id" element={<EditVeg />} />
+          <Route path="/zones/create" element={<CreateZone />} />
+          <Route path="/zones/edit/:id" element={<EditZone/>} />
           
         </Routes>
       </Layout>

@@ -35,7 +35,8 @@ export default function Home({loggedIn, setLoggedIn, toggle, setToggle   }) {
             </Link>  
             </div>
           ))}
-      </div>
+          </div>
+          
       </div>  
       }
       {loggedIn === false && 
