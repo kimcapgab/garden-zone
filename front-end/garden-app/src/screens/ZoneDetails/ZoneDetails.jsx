@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import './ZoneDetails.css'
 
 
-export default function ZoneDetails() {
+export default function ZoneDetails({loggedIn}) {
   const [zone, setZone] = useState([]);
   const { id } = useParams();
 
@@ -42,12 +42,13 @@ export default function ZoneDetails() {
             }
         </div>
       }
-      <div className='z-contain-btn'>
-      <Link to={`/vegetables/create`} className='underline'>
-      <button className='z-btn'> Add Vegetable</button>
-      </Link>
-      </div>
-
+      { loggedIn === true &&
+        <div className='z-contain-btn'>
+          <Link to={`/vegetables/create`} className='underline'>
+            <button className='z-btn'> Add Vegetable</button>
+          </Link>
+        </div>
+      } 
       <div className="garden-container">
         <img className='zone-garden' src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643420914/Project%204/7_nygqzw.png" alt="garden" />
       </div>

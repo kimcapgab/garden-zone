@@ -20,7 +20,7 @@ export default function SignUp({ setLoggedIn }) {
     }
     try {
       const user = await signUp(newUser)
-        setLoggedIn(user)
+        setLoggedIn(true)
         nav('/')
     } catch (error) {
       console.error(error)

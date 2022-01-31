@@ -1,5 +1,11 @@
 import api from './apiConfig'
 
+const getToken = () => {
+  return new Promise(resolve => {
+      resolve(`Bearer ${localStorage.getItem('token') || null}`)
+  })
+}
+
 export const getZones = async () => {
   try {
     const response = await api.get('/zones/')
@@ -20,7 +26,14 @@ export const getZone = async (id) => {
 
 export const createZone = async (zone) => {
   try {
-    const response = await api.post(`/zones/`, zone)
+    const token = await getToken();
+
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    }
+    const response = await api.post(`/zones/`, zone, headers)
     return response.data
   } catch (error) {
     throw error
@@ -29,7 +42,14 @@ export const createZone = async (zone) => {
 
 export const updateZone = async (id, zone) => {
   try {
-    const response = await api.put(`/zones/${id}/`, zone)
+    const token = await getToken();
+
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    }
+    const response = await api.put(`/zones/${id}/`, zone, headers)
     return response.data
   } catch (error) {
     throw error
@@ -38,7 +58,14 @@ export const updateZone = async (id, zone) => {
 
 export const deleteZone = async (id) => {
   try {
-    const response = await api.delete(`/zones/${id}/`)
+    const token = await getToken();
+
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    }
+    const response = await api.delete(`/zones/${id}/`, headers)
     return response.data
   } catch (error) {
     throw error

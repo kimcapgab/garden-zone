@@ -1,5 +1,11 @@
 import api from './apiConfig'
 
+const getToken = () => {
+  return new Promise(resolve => {
+      resolve(`Bearer ${localStorage.getItem('token') || null}`)
+  })
+}
+
 export const getVegetables = async () => {
   try {
       const response = await api.get('/vegetables/')
@@ -20,7 +26,14 @@ export const getVegetable = async (id) => {
 
 export const createVegetable = async (veg) => {
   try {
-    const response = await api.post(`/vegetables/`, veg)
+    const token = await getToken();
+
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    }
+    const response = await api.post(`/vegetables/`, veg, headers)
     return response.data
   } catch (error) {
     throw error
@@ -29,7 +42,14 @@ export const createVegetable = async (veg) => {
 
 export const updateVegetable = async (id, veg) => {
   try {
-    const response = await api.put(`/vegetables/${id}/`, veg)
+    const token = await getToken();
+
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    }
+    const response = await api.put(`/vegetables/${id}/`, veg, headers)
     return response.data
   } catch (error) {
     throw error
@@ -38,7 +58,14 @@ export const updateVegetable = async (id, veg) => {
 
 export const deleteVegetable = async (id) => {
   try {
-    const response = await api.delete(`/vegetables/${id}/`)
+    const token = await getToken();
+
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    }
+    const response = await api.delete(`/vegetables/${id}/`, headers)
     return response.data
   } catch (error) {
     throw error

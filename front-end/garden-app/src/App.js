@@ -38,8 +38,8 @@ function App() {
       <Layout loggedIn={loggedIn}>
         <Routes>
           <Route path="/" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} toggle={toggle} setToggle={setToggle} />} />
-          <Route path="/zones/:id" element={<ZoneDetails />} />
-          <Route path="/vegetables/:id" element={<VegDetails />} />
+          <Route path="/zones/:id" element={<ZoneDetails loggedIn={loggedIn} />} />
+          <Route path="/vegetables/:id" element={<VegDetails loggedIn={loggedIn}  />} />
           <Route path="/user/login/" element={<Login setLoggedIn={setLoggedIn} />} />
           <Route path="/logout" element={<LogOut setLoggedIn={setLoggedIn}  />} />
           <Route path="/user/signup/" element={<SignUp setLoggedIn={setLoggedIn} />} />

@@ -4,7 +4,6 @@ export const signUp = async (credentials) => {
   
   try {
     const res = await apiUrls.post("/user/signup/", credentials);
-    console.console.log("hello");
     localStorage.setItem("token", res.data.access);
     localStorage.setItem("refresh", res.data.refresh);
     console.log(res);

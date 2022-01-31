@@ -5,7 +5,7 @@ import './VegDetails.css'
 import { getVegetable } from '../../services/vegetables';
 import { Link } from 'react-router-dom'
 
-export default function VegDetails() {
+export default function VegDetails({loggedIn} ) {
   const [veggie, setVeggie] = useState([])
   const {id} = useParams()
 
@@ -33,11 +33,13 @@ export default function VegDetails() {
           <p>{ tips}</p>
         </div>
       }
-      <div className='edit-btn-container'>
-      <Link to={`/vegetables/edit/${id}`} className='underline'>
-      <button className='z-btn'> Edit Vegetable</button>
-        </Link>
-        <img className="plant" src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643603166/Project%204/Plant_Gardening_Instagram_Post_2_fomq0y.png" alt="edit-garden" />
+      {loggedIn === true &&
+        <div className='edit-btn-container'>
+          <Link to={`/vegetables/edit/${id}`} className='underline'>
+            <button className='z-btn'> Edit Vegetable</button>
+          </Link>
+          <img className="plant" src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643603166/Project%204/Plant_Gardening_Instagram_Post_2_fomq0y.png" alt="edit-garden" />
         </div>
+      }
     </div>
 )}
