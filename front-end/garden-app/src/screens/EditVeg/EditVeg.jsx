@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getVegetable, updateVegetable, deleteVegetable } from '../../services/vegetables';
-import { Link } from 'react-router-dom'
 import "./EditVeg.css"
 
 export default function EditVeg() {

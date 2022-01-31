@@ -3,7 +3,6 @@ import { getZones } from '../../services/zones';
 import { useState, useEffect } from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom'
-import Layout from '../../components/Layout/Layout';
 
 export default function Home({loggedIn, setLoggedIn, toggle, setToggle   }) {
   const [zones, setZones] = useState([])
@@ -25,7 +24,7 @@ export default function Home({loggedIn, setLoggedIn, toggle, setToggle   }) {
         <div>
     
       <h1 className='home-zone'>Select a Zone</h1>
-      <h3 className='hone-link'>Click <a className='link-zip' href='https://planthardiness.ars.usda.gov/' target="_blank" >here</a> to find out what zone you live in.</h3>
+      <h3 className='hone-link'>Click <a className='link-zip' href='https://planthardiness.ars.usda.gov/' target="_blank"  rel="noreferrer" >here</a> to find out what zone you live in.</h3>
       <div className='home-buttons'>
         {zones &&
           zones.map((zone) => (

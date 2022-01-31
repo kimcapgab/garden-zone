@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useEffect } from 'react'
 import { logOut } from '../../services/users'
 import { useNavigate } from 'react-router-dom'

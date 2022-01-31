@@ -8,9 +8,9 @@ const getToken = () => {
 
 
 const apiUrls = axios.create({
-  baseURL: process.env.NODE_ENV === 'PRODUCTION'
-  ? `https://garden-zone-db.herokuapp.com/`
-  : `http://localhost:8000/`
+  baseURL: process.env.NODE_ENV === 'production'
+  ? 'https://garden-zone-db.herokuapp.com/'
+  : 'https://garden-zone-db.herokuapp.com/'
 })
 
 // if (window.location.hostname === 'localhost') {

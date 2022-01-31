@@ -37,7 +37,7 @@ export default function VegDetails() {
       <Link to={`/vegetables/edit/${id}`} className='underline'>
       <button className='z-btn'> Edit Vegetable</button>
         </Link>
-        <img className="plant" src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643603166/Project%204/Plant_Gardening_Instagram_Post_2_fomq0y.png" alt="edit-image" />
+        <img className="plant" src="https://res.cloudinary.com/dn2x2ldxj/image/upload/v1643603166/Project%204/Plant_Gardening_Instagram_Post_2_fomq0y.png" alt="edit-garden" />
         </div>
     </div>
 )}
