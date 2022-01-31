@@ -10,7 +10,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 # Create your views here.
 class ZoneViewSet(viewsets.ModelViewSet):
-  queryset = Zone.objects.all()
+  queryset = Zone.objects.all().order_by('name')
   serializer_class = ZoneSerializer
   permission_classes = [permissions.IsAuthenticatedOrReadOnly]
   

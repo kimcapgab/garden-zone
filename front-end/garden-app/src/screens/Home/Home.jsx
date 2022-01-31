@@ -28,7 +28,7 @@ export default function Home({loggedIn, setLoggedIn, toggle, setToggle   }) {
       <div className='home-buttons'>
         {zones &&
           zones.map((zone) => (
-            <div>
+            <div  className={zone.id}>
             <Link to={`/zones/${zone.id}`} className='zone-link'>
             <button className='zone-buttons' key={zone.id}>Zone {zone.name}</button>
             </Link>  
