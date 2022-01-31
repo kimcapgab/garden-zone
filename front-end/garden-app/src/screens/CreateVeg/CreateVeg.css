@@ -70,7 +70,8 @@ select {
   .create-form {
     width: 270px;
   }
-  input {
-    width: 30px;
+  input,
+  select {
+    width: 270px;
   }
 }
