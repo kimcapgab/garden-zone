@@ -34,7 +34,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className="app"> 
       <Layout loggedIn={loggedIn}>
         <Routes>
           <Route path="/" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} toggle={toggle} setToggle={setToggle} />} />
